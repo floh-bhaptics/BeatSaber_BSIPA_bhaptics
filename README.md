@@ -7,6 +7,7 @@ This mod hooks into a few functions in Beat Saber and provides matching haptic f
 * Hitting an obstacle
 * Celebration or fail effect when finishing a level
 
+A second *"BeatSaberMusicalBhaptics"* mod is in the works that will provide feedback matching to the music, hence the "Functional" in the name.
 
 ## Compilation / installation
 
