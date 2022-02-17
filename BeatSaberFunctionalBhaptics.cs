@@ -74,7 +74,8 @@ namespace BeatSaberFunctionalBhaptics
             [HarmonyPostfix]
             public static void Postfix(NoteController noteController)
             {
-                if (noteController.noteData.colorType != ColorType.None) tactsuitVr.PlaybackHaptics("MissedNote");
+                if (noteController.noteData.colorType != ColorType.None)
+                    tactsuitVr.PlaybackHaptics("MissedNote");
 
             }
         }
