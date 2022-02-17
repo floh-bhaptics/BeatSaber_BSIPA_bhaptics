@@ -8,8 +8,8 @@
     <ProjectGuid>{9AA2105A-7A4E-4665-BCCB-C12ED76E48AE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BeatSaber_BSIPA_bhaptics</RootNamespace>
-    <AssemblyName>BeatSaber_BSIPA_bhaptics</AssemblyName>
+    <RootNamespace>BeatSaberFunctionalBhaptics</RootNamespace>
+    <AssemblyName>BeatSaberFunctionalBhaptics</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <DebugSymbols>true</DebugSymbols>
@@ -52,7 +52,7 @@
     </Reference>
     <Reference Include="Bhaptics.Tact">
       <HintPath>libs\Bhaptics.Tact.dll</HintPath>
-      <Private>True</Private>
+      <Private>False</Private>
     </Reference>
     <Reference Include="GameplayCore">
       <HintPath>D:\Games\Steam\steamapps\common\Beat Saber\Beat Saber_Data\Managed\GameplayCore.dll</HintPath>
@@ -113,7 +113,7 @@
     <Compile Include="MyBhapticsTactsuit.cs" />
     <Compile Include="Plugin.cs" />
     <Compile Include="Configuration\PluginConfig.cs" />
-    <Compile Include="BeatSaber_MusicalBhaptics.cs" />
+    <Compile Include="BeatSaberFunctionalBhaptics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -121,7 +121,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
-    <None Include="BeatSaber_BSIPA_bhaptics.csproj.user" Condition="Exists('BeatSaber_BSIPA_bhaptics.csproj.user')" />
+    <None Include="BeatSaberFunctionalBhaptics.csproj.user" Condition="Exists('BeatSaber_BSIPA_bhaptics.csproj.user')" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

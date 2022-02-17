@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
-using System.Threading;
 using Bhaptics.Tact;
-using BeatSaber_BSIPA_bhaptics;
+using BeatSaberFunctionalBhaptics;
 
 namespace MyBhapticsTactsuit
 {
@@ -19,7 +18,7 @@ namespace MyBhapticsTactsuit
         public bool suitDisabled = true;
         public bool systemInitialized = false;
         // Event to start and stop the heartbeat thread
-        private static ManualResetEvent HeartBeat_mrse = new ManualResetEvent(false);
+        //private static ManualResetEvent HeartBeat_mrse = new ManualResetEvent(false);
         // dictionary of all feedback patterns found in the bHaptics directory
         public Dictionary<String, FileInfo> FeedbackMap = new Dictionary<String, FileInfo>();
         public List<string> myEffectStrings = new List<string> { };
@@ -30,17 +29,6 @@ namespace MyBhapticsTactsuit
 
 
         private static RotationOption defaultRotationOption = new RotationOption(0.0f, 0.0f);
-
-        public void HeartBeatFunc()
-        {
-            while (true)
-            {
-                // Check if reset event is active
-                HeartBeat_mrse.WaitOne();
-                hapticPlayer.SubmitRegistered("HeartBeat");
-                Thread.Sleep(600);
-            }
-        }
 
         public TactsuitVR()
         {
@@ -55,8 +43,6 @@ namespace MyBhapticsTactsuit
             catch { LOG("Suit initialization failed!"); }
             RegisterAllTactFiles();
             LOG("Starting HeartBeat thread...");
-            Thread HeartBeatThread = new Thread(HeartBeatFunc);
-            HeartBeatThread.Start();
         }
 
         public void LOG(string logStr)
@@ -70,7 +56,9 @@ namespace MyBhapticsTactsuit
         void RegisterAllTactFiles()
         {
             // Get location of the compiled assembly and search through "bHaptics" directory and contained patterns
-            string configPath = Directory.GetCurrentDirectory() + "\\Plugins\\bHaptics";
+            // string configPath = Directory.GetCurrentDirectory() + "\\Plugins\\bHaptics";
+            string configPath = IPA.Utilities.UnityGame.UserDataPath + "\\bHapticsPatterns";
+            //LOG("Path: " + configPath);
             DirectoryInfo d = new DirectoryInfo(configPath);
             FileInfo[] Files = d.GetFiles("*.tact", SearchOption.AllDirectories);
             for (int i = 0; i < Files.Length; i++)
@@ -108,7 +96,6 @@ namespace MyBhapticsTactsuit
                 ScaleOption scaleOption = new ScaleOption(intensity, duration);
                 //LOG("Submit");
                 hapticPlayer.SubmitRegistered(key, scaleOption);
-                LOG("Playing back: " + key);
             }
             else
             {
@@ -143,16 +130,6 @@ namespace MyBhapticsTactsuit
         }
 
 
-        public void StartHeartBeat()
-        {
-            HeartBeat_mrse.Set();
-        }
-
-        public void StopHeartBeat()
-        {
-            HeartBeat_mrse.Reset();
-        }
-
         public bool IsPlaying(String effect)
         {
             return IsPlaying(effect);
@@ -172,7 +149,7 @@ namespace MyBhapticsTactsuit
         {
             // Yes, looks silly here, but if you have several threads like this, this is
             // very useful when the player dies or starts a new level
-            StopHeartBeat();
+            //StopHeartBeat();
         }
 
 

@@ -9,7 +9,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using IPALogger = IPA.Logging.Logger;
 
-namespace BeatSaber_BSIPA_bhaptics
+namespace BeatSaberFunctionalBhaptics
 {
     [Plugin(RuntimeOptions.SingleStartInit)]
     public class Plugin
@@ -27,7 +27,7 @@ namespace BeatSaber_BSIPA_bhaptics
         {
             Instance = this;
             Log = logger;
-            Log.Info("BeatSaber_BSIPA_bhaptics initialized.");
+            Log.Info("BeatSaberFunctionalBhaptics initialized.");
         }
 
         #region BSIPA Config
@@ -46,7 +46,7 @@ namespace BeatSaber_BSIPA_bhaptics
         public void OnApplicationStart()
         {
             Log.Debug("OnApplicationStart");
-            new GameObject("BeatSaber_BSIPA_bhapticsController").AddComponent<BeatSaber_MusicalBhaptics>();
+            new GameObject("BeatSaberFunctionalBhapticsController").AddComponent<BeatSaberFunctionalBhaptics>();
 
         }
 

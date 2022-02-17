@@ -1,12 +1,13 @@
 ﻿{
   "$schema": "https://raw.githubusercontent.com/bsmg/BSIPA-MetadataFileSchema/master/Schema.json",
-  "id": "BeatSaber_BSIPA_bhaptics",
-  "name": "BeatSaber_BSIPA_bhaptics",
+  "id": "BeatSaberFunctionalBhaptics",
+  "name": "BeatSaberFunctionalBhaptics",
   "author": "Florian Fahrenberger",
-  "version": "0.0.1",
-  "description": "Adds bhaptics support to Beat Saber",
+  "version": "1.0.0",
+  "description": "Adds functional (saber, notes, bombs, walls, ...) bhaptics haptic feedback support to Beat Saber",
   "gameVersion": "1.19.1",
   "dependsOn": {
+    //"bHaptics":  "^1.4.16",
     "BSIPA": "^4.2.0"
   }
 }
