@@ -57,7 +57,7 @@ namespace MyBhapticsTactsuit
         {
             // Get location of the compiled assembly and search through "bHaptics" directory and contained patterns
             // string configPath = Directory.GetCurrentDirectory() + "\\Plugins\\bHaptics";
-            string configPath = IPA.Utilities.UnityGame.UserDataPath + "\\bHapticsPatterns";
+            string configPath = IPA.Utilities.UnityGame.UserDataPath + "\\bHapticsFunctional";
             //LOG("Path: " + configPath);
             DirectoryInfo d = new DirectoryInfo(configPath);
             FileInfo[] Files = d.GetFiles("*.tact", SearchOption.AllDirectories);
