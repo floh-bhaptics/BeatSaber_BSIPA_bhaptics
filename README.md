@@ -1,4 +1,4 @@
-# BeatSaberFunctionalBhaptics
+# bhapticsFunctional
 
 This mod hooks into a few functions in Beat Saber and provides matching haptic feedback in the bHaptics vest, arms, and hands. Feedback currently includes:
 * Slicing blocks (left and right)
@@ -7,7 +7,10 @@ This mod hooks into a few functions in Beat Saber and provides matching haptic f
 * Hitting an obstacle
 * Celebration or fail effect when finishing a level
 
-A second *"BeatSaberMusicalBhaptics"* mod is in the works that will provide feedback matching to the music, hence the "Functional" in the name.
+I made a second *"bHapticsMusical"* mod that will provide feedback matching to the music, hence the "Functional" in the name.
+
+You can see a short demo of the effects provided to both mods here:
+[https://www.youtube.com/watch?v=X15WuW8BiaM](https://www.youtube.com/watch?v=X15WuW8BiaM)
 
 ## Compilation / installation
 
