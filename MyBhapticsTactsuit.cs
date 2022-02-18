@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Bhaptics.Tact;
-using BeatSaberFunctionalBhaptics;
+using bHapticsFunctional;
 
 namespace MyBhapticsTactsuit
 {
