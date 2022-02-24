@@ -4,6 +4,9 @@ using System.IO;
 using System.Text;
 using Bhaptics.Tact;
 using bHapticsFunctional;
+using System.Resources;
+using System.Globalization;
+using System.Collections;
 
 namespace MyBhapticsTactsuit
 {
@@ -20,7 +23,7 @@ namespace MyBhapticsTactsuit
         // Event to start and stop the heartbeat thread
         //private static ManualResetEvent HeartBeat_mrse = new ManualResetEvent(false);
         // dictionary of all feedback patterns found in the bHaptics directory
-        public Dictionary<String, FileInfo> FeedbackMap = new Dictionary<String, FileInfo>();
+        public Dictionary<String, String> FeedbackMap = new Dictionary<String, String>();
         public List<string> myEffectStrings = new List<string> { };
 
 #pragma warning disable CS0618 // remove warning that the C# library is deprecated
@@ -51,38 +54,22 @@ namespace MyBhapticsTactsuit
             //Plugin.Log.LogMessage(logStr);
         }
 
-
+        
 
         void RegisterAllTactFiles()
         {
-            // Get location of the compiled assembly and search through "bHaptics" directory and contained patterns
-            // string configPath = Directory.GetCurrentDirectory() + "\\Plugins\\bHaptics";
-            string configPath = IPA.Utilities.UnityGame.UserDataPath + "\\bHapticsFunctional";
-            //LOG("Path: " + configPath);
-            DirectoryInfo d = new DirectoryInfo(configPath);
-            FileInfo[] Files = d.GetFiles("*.tact", SearchOption.AllDirectories);
-            for (int i = 0; i < Files.Length; i++)
+            ResourceSet resourceSet = bHapticsFunctional.Properties.Resources.ResourceManager.GetResourceSet(CultureInfo.InvariantCulture, true, true);
+            
+            foreach (DictionaryEntry d in resourceSet)
             {
-                string filename = Files[i].Name;
-                string fullName = Files[i].FullName;
-                string prefix = Path.GetFileNameWithoutExtension(filename);
-                // LOG("Trying to register: " + prefix + " " + fullName);
-                if (filename == "." || filename == "..")
-                    continue;
-                string tactFileStr = File.ReadAllText(fullName);
                 try
                 {
-                    hapticPlayer.RegisterTactFileStr(prefix, tactFileStr);
-                    LOG("Pattern registered: " + prefix);
+                    hapticPlayer.RegisterTactFileStr(d.Key.ToString(), d.Value.ToString());
+                    LOG("Pattern registered: " + d.Key.ToString());
                 }
                 catch (Exception e) { LOG(e.ToString()); }
 
-                FeedbackMap.Add(prefix, Files[i]);
-                if (prefix.StartsWith("LightEffect"))
-                {
-                    myEffectStrings.Add(prefix);
-                    LOG("Light effect pattern added: " + prefix);
-                }
+                FeedbackMap.Add(d.Key.ToString(), d.Value.ToString());
             }
             systemInitialized = true;
         }

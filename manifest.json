@@ -3,11 +3,11 @@
   "id": "bHapticsFunctional",
   "name": "bHapticsFunctional",
   "author": "Florian Fahrenberger",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Adds functional (saber, notes, bombs, walls, ...) bhaptics haptic feedback support to Beat Saber",
   "gameVersion": "1.19.1",
   "dependsOn": {
-    //"bHaptics":  "^1.4.16",
-    "BSIPA": "^4.2.0"
+    "bHaptics":  "^1.4.16",
+    "BSIPA": "^4.2.1"
   }
 }

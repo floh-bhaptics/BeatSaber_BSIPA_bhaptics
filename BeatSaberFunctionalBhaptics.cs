@@ -97,7 +97,7 @@ namespace bHapticsFunctional
             public static void Postfix(Saber saber)
             {
                 bool isRight = false;
-                if (saber.name == "RightSaber") isRight = true;
+                if (saber.saberType == SaberType.SaberB) isRight = true;
                 tactsuitVr.Recoil("Blade", isRight);
                 //tactsuitVr.LOG("Hit: " + saber.name);
                 //tactsuitVr.PlaybackHaptics("HeartBeat");

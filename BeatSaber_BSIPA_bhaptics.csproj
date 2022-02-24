@@ -115,13 +115,37 @@
     <Compile Include="Configuration\PluginConfig.cs" />
     <Compile Include="BeatSaberFunctionalBhaptics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="bHapticsFunctional\ExplosionBelly.tact" />
+    <None Include="bHapticsFunctional\HeartBeat.tact" />
+    <None Include="bHapticsFunctional\HitByWall.tact" />
+    <None Include="bHapticsFunctional\LevelFailed.tact" />
+    <None Include="bHapticsFunctional\LevelSuccess.tact" />
+    <None Include="bHapticsFunctional\MissedNote.tact" />
+    <None Include="bHapticsFunctional\RecoilBladeVest_L.tact" />
+    <None Include="bHapticsFunctional\RecoilBladeVest_R.tact" />
+    <None Include="bHapticsFunctional\RecoilHands_L.tact" />
+    <None Include="bHapticsFunctional\RecoilHands_R.tact" />
+    <None Include="bHapticsFunctional\Recoil_L.tact" />
+    <None Include="bHapticsFunctional\Recoil_R.tact" />
     <None Include="Directory.Build.props" Condition="Exists('Directory.Build.props')" />
     <None Include="BeatSaberFunctionalBhaptics.csproj.user" Condition="Exists('BeatSaber_BSIPA_bhaptics.csproj.user')" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bHapticsFunctional\HeartBeat.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
