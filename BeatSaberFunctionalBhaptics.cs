@@ -105,21 +105,21 @@ namespace bHapticsFunctional
         }
         
 
-        [HarmonyPatch(typeof(PlayerHeadAndObstacleInteraction), "GetObstaclesContainingPoint", new Type[] { typeof(Vector3), typeof(List<ObstacleController>) })]
+        [HarmonyPatch(typeof(PlayerHeadAndObstacleInteraction), "RefreshIntersectingObstacles", new Type[] { typeof(Vector3) })]
         public class bhaptics_HeadAndObstacle
         {
 //            [HarmonyPostfix]
-            public static void Postfix(List<ObstacleController> obstacleControllers)
+            public static void Postfix(PlayerHeadAndObstacleInteraction __instance)
             {
                 //bool inObstacle = (__instance.intersectingObstacles.Count > 0);
                 //tactsuitVr.LOG("Cheching if in Obstacle 2: " + __instance.intersectingObstacles.ToString());
-                if (obstacleControllers.Count > 0) tactsuitVr.PlaybackHaptics("HitByWall");
+                if (__instance.playerHeadIsInObstacle) tactsuitVr.PlaybackHaptics("HitByWall");
                     //tactsuitVr.PlaySpecialEffect("HitByWall");
             }
         }
         
         
-        [HarmonyPatch(typeof(LevelCompletionResultsHelper), "ProcessScore", new Type[] { typeof(PlayerData), typeof(PlayerLevelStatsData), typeof(LevelCompletionResults), typeof(IDifficultyBeatmap), typeof(PlatformLeaderboardsModel) })]
+        [HarmonyPatch(typeof(LevelCompletionResultsHelper), "ProcessScore", new Type[] { typeof(PlayerData), typeof(PlayerLevelStatsData), typeof(LevelCompletionResults), typeof(IReadonlyBeatmapData), typeof(IDifficultyBeatmap), typeof(PlatformLeaderboardsModel) })]
         public class bhaptics_LevelResults
         {
             [HarmonyPostfix]
