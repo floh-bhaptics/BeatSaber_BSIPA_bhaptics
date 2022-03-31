@@ -76,6 +76,7 @@ namespace MyBhapticsTactsuit
 
         public void PlaybackHaptics(String key, float intensity = 1.0f, float duration = 1.0f)
         {
+            if (suitDisabled) return;
             //LOG("Trying to play");
             if (FeedbackMap.ContainsKey(key))
             {
@@ -96,8 +97,6 @@ namespace MyBhapticsTactsuit
             // isRightHand is just which side the feedback is on
             // intensity should usually be between 0 and 1
 
-            float duration = 1.0f;
-            var scaleOption = new ScaleOption(intensity, duration);
             // the function needs some rotation if you want to give the scale option as well
             var rotationFront = new RotationOption(0f, 0f);
             // make postfix according to parameter
@@ -111,9 +110,9 @@ namespace MyBhapticsTactsuit
             // between swords, pistols, shotguns, ... by just changing the shoulder feedback
             // and scaling via the intensity for arms and hands
             string keyVest = "Recoil" + weaponName + "Vest" + postfix;
-            hapticPlayer.SubmitRegistered(keyHands, scaleOption);
-            hapticPlayer.SubmitRegistered(keyArm, scaleOption);
-            hapticPlayer.SubmitRegistered(keyVest, scaleOption);
+            PlaybackHaptics(keyHands, intensity);
+            PlaybackHaptics(keyArm, intensity);
+            PlaybackHaptics(keyVest, intensity);
         }
 
 
