@@ -39,13 +39,19 @@ namespace MyBhapticsTactsuit
             try
             {
 #pragma warning disable CS0618 // remove warning that the C# library is deprecated
-                hapticPlayer = new HapticPlayer("H3VR_bhaptics", "H3VR_bhaptics");
+                hapticPlayer = new HapticPlayer("bHapticsFunctional", "bHapticsFunctional", bhapticsPlayerConnected, false);
 #pragma warning restore CS0618
-                suitDisabled = false;
+                //suitDisabled = false;
             }
             catch { LOG("Suit initialization failed!"); }
             RegisterAllTactFiles();
             LOG("Starting HeartBeat thread...");
+        }
+
+        private void bhapticsPlayerConnected(bool connected)
+        {
+            //LOG("Connection changed " + connected);
+            suitDisabled = !connected;
         }
 
         public void LOG(string logStr)
@@ -58,6 +64,7 @@ namespace MyBhapticsTactsuit
 
         void RegisterAllTactFiles()
         {
+            if (suitDisabled) return;
             ResourceSet resourceSet = bHapticsFunctional.Properties.Resources.ResourceManager.GetResourceSet(CultureInfo.InvariantCulture, true, true);
             
             foreach (DictionaryEntry d in resourceSet)
