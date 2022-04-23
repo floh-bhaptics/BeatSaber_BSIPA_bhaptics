@@ -130,6 +130,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bHapticsFunctional\ExplosionBelly.tact" />
+    <None Include="bHapticsFunctional\ExplosionUpFace.tact" />
+    <None Include="bHapticsFunctional\HeadHit.tact" />
     <None Include="bHapticsFunctional\HeartBeat.tact" />
     <None Include="bHapticsFunctional\HitByWall.tact" />
     <None Include="bHapticsFunctional\LevelFailed.tact" />

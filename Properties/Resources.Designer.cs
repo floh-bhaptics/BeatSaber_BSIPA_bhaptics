@@ -70,6 +70,24 @@ namespace bHapticsFunctional.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {&quot;project&quot;:{&quot;createdAt&quot;:1650716286371,&quot;description&quot;:&quot;&quot;,&quot;layout&quot;:{&quot;layouts&quot;:{&quot;Head&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:1,&quot;x&quot;:0.2,&quot;y&quot;:0.5},{&quot;index&quot;:2,&quot;x&quot;:0.4,&quot;y&quot;:0.5},{&quot;index&quot;:3,&quot;x&quot;:0.6,&quot;y&quot;:0.5},{&quot;index&quot;:4,&quot;x&quot;:0.8,&quot;y&quot;:0.5},{&quot;index&quot;:5,&quot;x&quot;:1,&quot;y&quot;:0.5}]},&quot;name&quot;:&quot;Tactal&quot;,&quot;type&quot;:&quot;Tactal&quot;},&quot;mediaFileDuration&quot;:1,&quot;name&quot;:&quot;ExplosionUpFace&quot;,&quot;tracks&quot;:[{&quot;effects&quot;:[{&quot;modes&quot;:{&quot;Head&quot;:{&quot;dotMode&quot;:{&quot;dotConnected&quot;:false,&quot;feedback&quot;:[]},&quot;mode&quot;:&quot;PATH_MODE&quot;,&quot;pathMode&quot;:{&quot;feedback&quot;:[{&quot;movingPattern&quot;:&quot;CONST_SPEED&quot;,&quot;playbackType&quot;:&quot;FADE_ [Rest der Zeichenfolge wurde abgeschnitten]... ähnelt.
+        /// </summary>
+        internal static string ExplosionUpFace {
+            get {
+                return ResourceManager.GetString("ExplosionUpFace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {&quot;project&quot;:{&quot;createdAt&quot;:1650716514375,&quot;description&quot;:&quot;&quot;,&quot;layout&quot;:{&quot;layouts&quot;:{&quot;Head&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:1,&quot;x&quot;:0.2,&quot;y&quot;:0.5},{&quot;index&quot;:2,&quot;x&quot;:0.4,&quot;y&quot;:0.5},{&quot;index&quot;:3,&quot;x&quot;:0.6,&quot;y&quot;:0.5},{&quot;index&quot;:4,&quot;x&quot;:0.8,&quot;y&quot;:0.5},{&quot;index&quot;:5,&quot;x&quot;:1,&quot;y&quot;:0.5}]},&quot;name&quot;:&quot;Tactal&quot;,&quot;type&quot;:&quot;Tactal&quot;},&quot;mediaFileDuration&quot;:1,&quot;name&quot;:&quot;HeadHit&quot;,&quot;tracks&quot;:[{&quot;effects&quot;:[{&quot;modes&quot;:{&quot;Head&quot;:{&quot;dotMode&quot;:{&quot;dotConnected&quot;:false,&quot;feedback&quot;:[]},&quot;mode&quot;:&quot;PATH_MODE&quot;,&quot;pathMode&quot;:{&quot;feedback&quot;:[{&quot;movingPattern&quot;:&quot;CONST_SPEED&quot;,&quot;playbackType&quot;:&quot;FADE_OUT&quot;,&quot;po [Rest der Zeichenfolge wurde abge... ähnelt.
+        /// </summary>
+        internal static string HeadHit {
+            get {
+                return ResourceManager.GetString("HeadHit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die {&quot;project&quot;:{&quot;createdAt&quot;:1589039716311,&quot;description&quot;:&quot;&quot;,&quot;layout&quot;:{&quot;layouts&quot;:{&quot;VestBack&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0},{&quot;index&quot;:1,&quot;x&quot;:0.333,&quot;y&quot;:0},{&quot;index&quot;:2,&quot;x&quot;:0.667,&quot;y&quot;:0},{&quot;index&quot;:3,&quot;x&quot;:1,&quot;y&quot;:0},{&quot;index&quot;:4,&quot;x&quot;:0,&quot;y&quot;:0.25},{&quot;index&quot;:5,&quot;x&quot;:0.333,&quot;y&quot;:0.25},{&quot;index&quot;:6,&quot;x&quot;:0.667,&quot;y&quot;:0.25},{&quot;index&quot;:7,&quot;x&quot;:1,&quot;y&quot;:0.25},{&quot;index&quot;:8,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:9,&quot;x&quot;:0.333,&quot;y&quot;:0.5},{&quot;index&quot;:10,&quot;x&quot;:0.667,&quot;y&quot;:0.5},{&quot;index&quot;:11,&quot;x&quot;:1,&quot;y&quot;:0.5},{&quot;index&quot;:12,&quot;x&quot;:0,&quot;y&quot;:0.75},{&quot;index&quot;:13,&quot;x&quot;:0.333,&quot;y&quot;:0.75},{&quot;index&quot;:14,&quot;x&quot;:0.667,&quot;y... ähnelt.
         /// </summary>
         internal static string HeartBeat {
