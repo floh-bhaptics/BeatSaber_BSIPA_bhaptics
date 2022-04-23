@@ -86,6 +86,7 @@ namespace bHapticsFunctional
             [HarmonyPostfix]
             public static void Postfix()
             {
+                tactsuitVr.PlaybackHaptics("ExplosionFeet");
                 tactsuitVr.PlaybackHaptics("ExplosionBelly");
                 tactsuitVr.PlaybackHaptics("ExplosionUpFace");
             }
@@ -114,8 +115,13 @@ namespace bHapticsFunctional
             {
                 //bool inObstacle = (__instance.intersectingObstacles.Count > 0);
                 //tactsuitVr.LOG("Cheching if in Obstacle 2: " + __instance.intersectingObstacles.ToString());
-                if (__instance.playerHeadIsInObstacle) { tactsuitVr.PlaybackHaptics("HitByWall"); tactsuitVr.PlaybackHaptics("HeadHit"); }
-                    //tactsuitVr.PlaySpecialEffect("HitByWall");
+                if (__instance.playerHeadIsInObstacle)
+                {
+                    tactsuitVr.PlaybackHaptics("HeadHit");
+                    tactsuitVr.PlaybackHaptics("HitByWall");
+                    tactsuitVr.PlaybackHaptics("ExplosionFeet");
+                }
+                //tactsuitVr.PlaySpecialEffect("HitByWall");
             }
         }
         

@@ -121,6 +121,9 @@
   <data name="ExplosionBelly" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bHapticsFunctional\ExplosionBelly.tact;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>
+  <data name="ExplosionFeet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bHapticsFunctional\ExplosionFeet.tact;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
+  </data>
   <data name="ExplosionUpFace" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bHapticsFunctional\ExplosionUpFace.tact;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;Windows-1252</value>
   </data>

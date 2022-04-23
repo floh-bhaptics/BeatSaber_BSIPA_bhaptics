@@ -70,6 +70,15 @@ namespace bHapticsFunctional.Properties {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die {&quot;project&quot;:{&quot;createdAt&quot;:1650439491039,&quot;description&quot;:&quot;&quot;,&quot;id&quot;:&quot;&quot;,&quot;layout&quot;:{&quot;layouts&quot;:{&quot;FootL&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:1,&quot;x&quot;:0.5,&quot;y&quot;:0.5},{&quot;index&quot;:2,&quot;x&quot;:1,&quot;y&quot;:0.5}],&quot;FootR&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:1,&quot;x&quot;:0.5,&quot;y&quot;:0.5},{&quot;index&quot;:2,&quot;x&quot;:1,&quot;y&quot;:0.5}]},&quot;name&quot;:&quot;TactosyF&quot;,&quot;type&quot;:&quot;Foot&quot;},&quot;mediaFileDuration&quot;:1,&quot;name&quot;:&quot;ExplosionFeet&quot;,&quot;tracks&quot;:[{&quot;effects&quot;:[{&quot;modes&quot;:{&quot;FootL&quot;:{&quot;dotMode&quot;:{&quot;dotConnected&quot;:false,&quot;feedback&quot;:[{&quot;endTime&quot;:478,&quot;playbackType&quot;:&quot;FADE_OUT&quot;,&quot;pointList&quot;:[{&quot;index&quot;:1,&quot;intensity&quot;:1},{&quot;in [Rest der Zeichenfolge ... ähnelt.
+        /// </summary>
+        internal static string ExplosionFeet {
+            get {
+                return ResourceManager.GetString("ExplosionFeet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die {&quot;project&quot;:{&quot;createdAt&quot;:1650716286371,&quot;description&quot;:&quot;&quot;,&quot;layout&quot;:{&quot;layouts&quot;:{&quot;Head&quot;:[{&quot;index&quot;:0,&quot;x&quot;:0,&quot;y&quot;:0.5},{&quot;index&quot;:1,&quot;x&quot;:0.2,&quot;y&quot;:0.5},{&quot;index&quot;:2,&quot;x&quot;:0.4,&quot;y&quot;:0.5},{&quot;index&quot;:3,&quot;x&quot;:0.6,&quot;y&quot;:0.5},{&quot;index&quot;:4,&quot;x&quot;:0.8,&quot;y&quot;:0.5},{&quot;index&quot;:5,&quot;x&quot;:1,&quot;y&quot;:0.5}]},&quot;name&quot;:&quot;Tactal&quot;,&quot;type&quot;:&quot;Tactal&quot;},&quot;mediaFileDuration&quot;:1,&quot;name&quot;:&quot;ExplosionUpFace&quot;,&quot;tracks&quot;:[{&quot;effects&quot;:[{&quot;modes&quot;:{&quot;Head&quot;:{&quot;dotMode&quot;:{&quot;dotConnected&quot;:false,&quot;feedback&quot;:[]},&quot;mode&quot;:&quot;PATH_MODE&quot;,&quot;pathMode&quot;:{&quot;feedback&quot;:[{&quot;movingPattern&quot;:&quot;CONST_SPEED&quot;,&quot;playbackType&quot;:&quot;FADE_ [Rest der Zeichenfolge wurde abgeschnitten]... ähnelt.
         /// </summary>
         internal static string ExplosionUpFace {
