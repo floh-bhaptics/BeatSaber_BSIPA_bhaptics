@@ -126,7 +126,7 @@ namespace bHapticsFunctional
         }
         
         
-        [HarmonyPatch(typeof(LevelCompletionResultsHelper), "ProcessScore", new Type[] { typeof(PlayerData), typeof(PlayerLevelStatsData), typeof(LevelCompletionResults), typeof(IReadonlyBeatmapData), typeof(IDifficultyBeatmap), typeof(PlatformLeaderboardsModel) })]
+        [HarmonyPatch(typeof(LevelCompletionResultsAnalyticsHelper), "FillEventData", new Type[] { typeof(LevelCompletionResults), typeof(Dictionary<string, string>) })]
         public class bhaptics_LevelResults
         {
             [HarmonyPostfix]
